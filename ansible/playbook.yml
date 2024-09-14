@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: yes
+  tags: deploy
+  
+  tasks:
+    - name: Run laravel app on container
+      community.docker.docker_container:
+        image: ruslan0688/devops-for-programmers-project-77
+        platform: linux/amd64
+        name: wiki-app
+        state: started
+        restart_policy: "always"
+        restart: true
+        ports:
+          - "80:3000"        
+       
+        
+- hosts: webservers
+  roles:
+   - { role: datadog.datadog, become: yes }
+  tags: datadog
