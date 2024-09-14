@@ -9,3 +9,14 @@ temp/
 .npm/
 .cache/
 *.sqlite
+
+.terraform
+*.auto.tfvars
+*.backup
+secret.*
+secrets.*
+vault_password
+key.*
+*.tfstate
+*.lock.hcl
+ansible_vars.json
