@@ -1,0 +1,18 @@
+# For local development
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    ports:
+      - "8080:8080"
+    # command: ["make", "dev"]
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - APP_KEY=base64:04Qmo52sZf861iwdgMkHbjnuMB2RV9aNLXOWJozU9Wk=
+    command: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
