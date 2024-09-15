@@ -1,7 +1,4 @@
-output "private_key_path 77777777777777 = " {
-  value = file("~/.ssh/id_ed25519")
-}
-
+#test
 
 resource "yandex_vpc_network" "net" {
   name = "hexlet-ruslan-vpc"
@@ -96,4 +93,3 @@ resource "yandex_vpc_security_group" "vm_sg" {
 
 
 variable "yc_iam_token" {}
-
