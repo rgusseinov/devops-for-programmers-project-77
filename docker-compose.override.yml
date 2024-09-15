@@ -10,9 +10,5 @@ services:
       - ./app:/app
     ports:
       - "8080:8080"
-    # command: ["make", "dev"]
-    environment:
-      - APP_ENV=local
-      - APP_DEBUG=true
-      - APP_KEY=base64:04Qmo52sZf861iwdgMkHbjnuMB2RV9aNLXOWJozU9Wk=
-    command: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]
+    # command: ["make", "start-app"] // run local webserver with port 8000
+    command: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"] # Run container in port 8080
