@@ -1,3 +1,8 @@
+output "private_key_path 77777777777777 = " {
+  value = file("~/.ssh/id_ed25519")
+}
+
+
 resource "yandex_vpc_network" "net" {
   name = "hexlet-ruslan-vpc"
 }
