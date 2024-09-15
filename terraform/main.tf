@@ -41,7 +41,7 @@ resource "yandex_compute_instance" "web" {
   connection {
     type        = "ssh"
     user        = "ruslan"
-    private_key = file("C:\\Users\\RGuseinov\\.ssh\\id_rsa.pub")
+    private_key = file("${path.module}/id_rsa.pub")
     host        = self.network_interface.0.nat_ip_address
   }
 
