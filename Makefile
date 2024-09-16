@@ -22,3 +22,10 @@ install:
 
 deploy:
 	make -C ansible deploy
+
+
+encrypt:
+	ansible-vault encrypt --ask-vault-password group_vars/vault.yml
+
+decrypt:
+	ansible-vault decrypt --ask-vault-password group_vars/vault.yml
