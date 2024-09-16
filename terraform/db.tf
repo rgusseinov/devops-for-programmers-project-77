@@ -11,7 +11,7 @@ resource "yandex_mdb_postgresql_cluster" "dbcluster" {
       disk_size          = 15
     }
     postgresql_config = {
-      max_connections    = 100
+      max_connections = 100
     }
   }
 

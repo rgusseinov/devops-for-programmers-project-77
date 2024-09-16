@@ -14,7 +14,7 @@ resource "yandex_compute_instance" "web" {
   count = 2
 
   name = "yc-web-server-${count.index}"
-  zone = "ru-central1-a"	
+  zone = "ru-central1-a"
 
   resources {
     cores  = 2
@@ -58,8 +58,8 @@ sudo docker run -d -p 0.0.0.0:80:3000 \
   -e DB_PASS=${var.db_password} \
   ghcr.io/requarks/wiki:2.5
 EOT
-    ]    
-  
+    ]
+
   }
 }
 
