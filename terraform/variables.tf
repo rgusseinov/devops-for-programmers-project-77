@@ -30,6 +30,12 @@ variable "user_ssh_key" {
   sensitive = true
 }
 
+variable "user_private_ssh_key" {
+  description = "Private SSH key used for instance access"
+  type        = string
+  sensitive   = true
+}
+
 variable "db_name" {
   type      = string
   sensitive = true
