@@ -41,7 +41,6 @@ resource "yandex_compute_instance" "web" {
   connection {
     type        = "ssh"
     user        = "ruslan"
-    #private_key = file("~/.ssh/id_ed25519")
     private_key = var.user_private_ssh_key
     host        = self.network_interface.0.nat_ip_address
   }
@@ -92,3 +91,4 @@ resource "yandex_vpc_security_group" "vm_sg" {
 
 
 variable "yc_iam_token" {}
+
