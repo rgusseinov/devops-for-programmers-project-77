@@ -1,5 +1,3 @@
-#test
-
 resource "yandex_vpc_network" "net" {
   name = "hexlet-ruslan-vpc"
 }
