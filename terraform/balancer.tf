@@ -34,7 +34,7 @@ resource "yandex_alb_backend_group" "lb-backend-group" {
 
 resource "yandex_alb_load_balancer" "project-balancer" {
   name       = "project-load-balancer"
-  network_id = yandex_vpc_network.vpc.id
+  network_id = yandex_vpc_network.net.id
   allocation_policy {
     location {
       zone_id   = "ru-central1-a"
