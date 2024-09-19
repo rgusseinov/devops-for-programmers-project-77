@@ -6,6 +6,7 @@ dist/
 tmp/
 temp/
 .env
+**/.env
 .npm/
 .cache/
 *.sqlite

@@ -3,18 +3,19 @@
   tags: deploy
 
   tasks:
+    - name: create env
+      ansible.builtin.copy:
+        src: templates/.env
+        dest: .env
+        mode: "0644"
     - name: Run laravel app on container
       community.docker.docker_container:
         image: ruslan0688/devops-for-programmers-project-77
         platform: linux/amd64
-        name: wiki-app
+        name: laravel-app
         state: started
         restart_policy: "always"
         restart: true
         ports:
           - "80:3000"
-
-- hosts: webservers
-  roles:
-    - { role: datadog.datadog, become: yes }
-  tags: datadog
+        env_file: .env
