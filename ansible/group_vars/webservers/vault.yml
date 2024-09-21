@@ -1,6 +1,6 @@
 yc_iam_token: "y0_AgAAAAAL47XHAATuwQAAAAEP4ykMAAAq8Zbr4rFAkIfCv_V_DQ1DojehfQ"
 
-vault_datadog_api_key: "88d00d4dbd2af4e9f7945f39ed267e06"
+vault_datadog_api_key: "22372426d7592233bd9f60375f5bbc60"
 
 vault_db_connection: "pgsql"
 vault_db_host: "127.0.0.1"

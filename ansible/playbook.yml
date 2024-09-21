@@ -22,3 +22,8 @@
         ports:
           - "80:3000"
         env_file: .env
+
+- hosts: webservers
+  roles:
+    - { role: datadog.datadog, become: yes }
+  tags: datadog
