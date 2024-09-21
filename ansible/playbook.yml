@@ -3,9 +3,12 @@
   tags: deploy
 
   tasks:
+    - name: Debug db_connection variable
+      debug:
+        var: db_connection
     - name: create env
-      ansible.builtin.copy:
-        src: templates/.env
+      ansible.builtin.template:
+        src: templates/env.j2
         dest: .env
         mode: "0644"
     - name: Run laravel app on container

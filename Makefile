@@ -25,7 +25,7 @@ deploy:
 
 
 encrypt:
-	ansible-vault encrypt --ask-vault-password group_vars/webservers/vault.yml
+	ansible-vault encrypt --ask-vault-password ansible/group_vars/webservers/vault.yml
 
 decrypt:
-	ansible-vault decrypt --ask-vault-password group_vars/webservers/vault.yml
+	ansible-vault decrypt --ask-vault-password ansible/group_vars/webservers/vault.yml

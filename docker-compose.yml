@@ -17,19 +17,21 @@ services:
       - DATABASE_HOST=${DB_HOST}
       - DATABASE_NAME=${DB_DATABASE}
       - DATABASE_USERNAME=${DB_USERNAME}
-      - DATABASE_PASSWORD=${DB_PASSWORD}
+      - DATABASE_PASSWORD=${DB_PASSWORD} 
     env_file:
-      - .env
+      - app/.env
 
   db:
     image: postgres:latest
+    ports:
+      - "0.0.0.0:5433:5432"
     restart: always
     environment:
-      - POSTGRES_USER=${DB_USERNAME}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
-      - POSTGRES_DB=${DB_DATABASE}
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=RG2023!
+      - POSTGRES_DB=laravel_db
     env_file:
-      - .env
+      - app/.env
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s

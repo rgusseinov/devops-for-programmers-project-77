@@ -1,0 +1,12 @@
+yc_iam_token: "y0_AgAAAAAL47XHAATuwQAAAAEP4ykMAAAq8Zbr4rFAkIfCv_V_DQ1DojehfQ"
+
+vault_datadog_api_key: "88d00d4dbd2af4e9f7945f39ed267e06"
+
+vault_db_connection: "pgsql"
+vault_db_host: "127.0.0.1"
+vault_db_port: "5432"
+vault_db_database: "hexlet_777"
+vault_db_username: "postgres"
+vault_db_password: "RG2023!"
+
+
