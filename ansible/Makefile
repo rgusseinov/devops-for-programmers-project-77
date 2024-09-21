@@ -1,6 +1,3 @@
-setup:
-	ansible-playbook playbook_setup.yml --vault-password-file vault_password -i inventory.ini
-
 deploy:
 	ansible-playbook playbook.yml --vault-password-file vault_password -i inventory.ini
 
