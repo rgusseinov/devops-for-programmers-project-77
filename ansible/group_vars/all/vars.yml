@@ -1,7 +1,6 @@
 app_port: "80"
 app_tag: "latest"
 
-datadog_api_key: "88d00d4dbd2af4e9f7945f39ed267e06"
 datadog_checks:
   http_check:
     instances:
