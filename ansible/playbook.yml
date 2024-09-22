@@ -26,4 +26,8 @@
 - hosts: webservers
   roles:
     - { role: datadog.datadog, become: yes }
+  vars:
+    datadog_site: "us5.datadoghq.com"
+    datadog_api_key: "22372426d7592233bd9f60375f5bbc60"
+
   tags: datadog
