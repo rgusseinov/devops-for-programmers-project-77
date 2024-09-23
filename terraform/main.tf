@@ -44,7 +44,6 @@ resource "yandex_compute_instance" "web" {
     private_key = var.user_private_ssh_key
     host        = self.network_interface.0.nat_ip_address
   }
-
 }
 
 resource "yandex_vpc_security_group" "vm_sg" {

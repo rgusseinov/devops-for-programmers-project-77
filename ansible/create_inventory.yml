@@ -1,0 +1,11 @@
+- hosts: localhost
+  gather_facts: no
+  vars:
+    ansible_vars: "{{ lookup('file', 'ansible_vars.json') | from_json }}"
+    
+  tasks:
+    - name: Generating inventory.ini
+      template:
+        src: inventory.ini.j2
+        dest: ../ansible/inventory.ini
+

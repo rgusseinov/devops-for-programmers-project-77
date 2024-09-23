@@ -14,6 +14,9 @@ init:
 apply:
 	make -C terraform apply
 
+output:
+	make -C terraform output
+
 destroy:
 	make -C terraform destroy
 
@@ -23,6 +26,8 @@ install:
 deploy:
 	make -C ansible deploy
 
+inventory:
+	make -C ansible inventory
 
 encrypt:
 	ansible-vault encrypt --ask-vault-password ansible/group_vars/webservers/vault.yml

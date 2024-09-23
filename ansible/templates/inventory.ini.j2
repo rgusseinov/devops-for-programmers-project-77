@@ -1,0 +1,4 @@
+[webservers]
+{% for ip in ansible_vars.webserver_ips.value %}
+server{{ loop.index }} ansible_host={{ ip }} ansible_user=ruslan
+{% endfor %}
