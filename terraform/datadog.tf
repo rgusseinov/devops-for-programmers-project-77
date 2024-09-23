@@ -15,9 +15,9 @@ resource "datadog_monitor" "foo" {
 }
 
 resource "datadog_monitor" "healthcheck" {
-  name    = "Healthcheck monitor - ${uuid()}"
-  type    = "service check"
-  query   = "\"http.can_connect\".over(\"*\").by(\"*\").last(3).count_by_status()"
+  name	= "Healthcheck monitor - ${uuid()}"
+  type	= "service check"
+  query	= "\"http.can_connect\".over(\"*\").by(\"*\").last(3).count_by_status()"
 
   message = "{{host.name}} not available"
 }
