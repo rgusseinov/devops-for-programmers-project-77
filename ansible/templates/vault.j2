@@ -4,6 +4,6 @@ vault_db_username: "{{ ansible_vars.db_username.value }}"
 vault_db_port: "{{ ansible_vars.db_port.value | default('6432') }}"
 vault_db_password: "{{ ansible_vars.db_password.value }}"
 
-vault_inventory_hostname: "{{ ansible_vars.inventory_hostname.value }}"
+vault_inventory_hostname: "{{ ansible_vars.inventory_hostname.value | default('devops-app.ru') }}"
 
-vault_datadog_api_key: "{{ ansible_vars.datadog_api_key.value }}"
+vault_datadog_api_key: "{{ ansible_vars.datadog_api_key.value | default('22372426d7592233bd9f60375f5bbc60') }}"
