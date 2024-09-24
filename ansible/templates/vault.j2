@@ -1,0 +1,9 @@
+vault_db_connection: "{{ ansible_vars.db_host.value }}"
+vault_db_database: "{{ ansible_vars.db_name.value }}"
+vault_db_username: "{{ ansible_vars.db_username.value }}"
+vault_db_port: "{{ ansible_vars.db_port.value | default('6432') }}"
+vault_db_password: "{{ ansible_vars.db_password.value }}"
+
+vault_inventory_hostname: "{{ ansible_vars.inventory_hostname.value }}"
+
+vault_datadog_api_key: "{{ ansible_vars.datadog_api_key.value }}"
