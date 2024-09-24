@@ -71,7 +71,3 @@ resource "yandex_vpc_security_group" "vm_sg" {
     to_port        = 80
   }
 }
-
-
-variable "yc_iam_token" {}
-

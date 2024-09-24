@@ -1,3 +1,6 @@
+
+variable "yc_iam_token" {}
+
 variable "yc_token" {
   type      = string
   sensitive = true

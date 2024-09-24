@@ -7,5 +7,5 @@
     - name: Generating inventory.ini
       template:
         src: inventory.ini.j2
-        dest: ../ansible/inventory.ini
+        dest: inventory.ini
 
